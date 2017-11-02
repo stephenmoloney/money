@@ -8,7 +8,7 @@ defmodule Money.Mixfile do
     [app: :money,
      name: "Money",
      version: @version,
-     elixir: "~> 1.0",
+     elixir: "~> 1.5",
      deps: deps(),
      source_url: "https://github.com/liuggio/money",
      docs: fn ->
@@ -30,14 +30,14 @@ defmodule Money.Mixfile do
   defp deps do
     [
       # Soft dependencies
-      {:ecto, "~> 1.0 or ~> 2.0 or ~> 2.1", optional: true},
-      {:phoenix_html, "~> 2.0", optional: true},
+      {:ecto, "~> 2.2", optional: true},
+      {:phoenix_html, "~> 2.10", optional: true},
 
       # Code style
-      {:credo, "~> 0.5", only: [:dev, :test]},
+      {:credo, "~> 0.8", only: [:dev, :test]},
 
       # Docs
-      {:ex_doc, "~> 0.14", only: [:dev, :docs]},
+      {:ex_doc, "~> 0.18", only: [:dev, :docs]},
     ]
   end
 
